@@ -1,0 +1,63 @@
+create table deptlogin(
+d_id text primary key,
+	d_pwd text 
+);
+insert into deptlogin values('d1','amma1'),('d2','amma2'),('d3','amma3');
+
+drop table person cascade;
+
+create table person(
+p_id text primary key,
+p_name text,
+p_dept text,
+studorstaff text
+
+);
+
+insert into person values ('p1','sumedh','cse','student'),('p2','manoj','ece','student'),('p3','guna','eee','staff');
+
+drop table servicelogin cascade;
+
+create table servicelogin (
+ss_id text primary key,
+ss_pwd text
+
+
+);
+
+insert into servicelogin values ('ss1','123456'),('ss2','987654'),('ss3','555666');
+
+
+drop table work cascade;
+create table work(
+ss_id text ,
+c_id int primary key,
+comp_type text,
+comp_spec text,
+status text
+
+);
+
+drop table complaint cascade;
+CREATE TABLE complaint(p_id text, comp_type text, comp_spec text, 
+					   p_dept text,
+					  c_id INT primary key , 
+					   status text
+					  );
+
+
+create table personlogin(p_id varchar(50), password varchar(50), PRIMARY KEY (p_id));
+
+insert into personlogin values('p1','abc123'),('p2','pqr123'),('p3','xyz123');
+
+create table servicestaff
+(ss_id varchar(50), ss_dept varchar(50), ss_name varchar(50) ,PRIMARY KEY(ss_id));
+
+create table department(d_id varchar(50), d_name varchar(50), d_hod varchar(50) , PRIMARY KEY(d_id));
+
+insert into department values ('d1','software','sumedh'),('d2','hardware','sharukh'),('d3','network','prabhas')
+
+insert into servicestaff values ('ss1','hardware','messi'),('ss2','software','ronaldo'),
+('ss3','network','neymar');
+
+
